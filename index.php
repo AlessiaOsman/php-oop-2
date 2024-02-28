@@ -22,15 +22,15 @@ require_once __DIR__ . '/data/categories.php';
         <div class="row gap-3">
         <?php foreach ($products as $product): ?>
             <div  class="card col-4" style="width: 18rem;">
-            <img src="<?=$product->image?>" class="card-img-top" alt="...">
+            <img src="<?=$product->getImage()?>" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title"><?=$product->name?></h5>
+                <h5 class="card-title"><?=$product->getName()?></h5>
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><?=$product->getCategory()?></li>
             </ul>
             <div class="card-body">
-                <a href="<?=$product->image?>" class="card-link">Card link</a>
+                <a href="<?=$product->getImage()?>" class="card-link">Visualizza l'immagine</a>
             </div>
         </div>
             <?php endforeach ?>
